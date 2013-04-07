@@ -5,7 +5,7 @@
 
 pkgname=btrfs-progs-git
 _gitname=btrfs-progs
-pkgver=20120328
+pkgver=20130407
 pkgrel=1
 pkgdesc="Btrfs filesystem utilities"
 arch=("i686" "x86_64")
