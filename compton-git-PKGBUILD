@@ -4,12 +4,12 @@
 pkgname=compton-git
 _gitname="compton"
 pkgver=20130408
-pkgrel=2
+pkgrel=1
 pkgdesc="X Compositor (a fork of xcompmgr-dana)"
 arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
-depends=('libx11' 'libxcomposite' 'libxdamage' 'libxfixes' 'libxext' 'libxrender' 'libxrandr' 'xproto' 'bash' 'xorg-xprop' 'xorg-xwininfo' 'pcre' 'libconfig')
+depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'pcre' 'libconfig')
 makedepends=('git' 'make' 'pkg-config' 'asciidoc' 'libgl')
 source=("git://github.com/chjj/compton.git")
 md5sums=("SKIP")
