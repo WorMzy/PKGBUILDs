@@ -1,0 +1,59 @@
+# Maintainer:  Matt Monaco <net 0x01b dgbaley27>
+# Contributor: Matej Lach <matej.lach@gmail.com>
+# Contributor: cantabile <cantabile dot desu at gmail dot com>
+# Contributor: extcake < extcake@gmail.com >
+
+_gitroot="git://git.mplayer2.org/mplayer2-build.git"
+
+pkgname=mplayer2-git
+_gitname="mplayer2"
+pkgver=20130412
+pkgrel=1
+pkgdesc="An advanced general-purpose video player."
+url="http://www.mplayer2.org"
+license=(GPL3)
+arch=('x86_64' 'i686')
+install="$pkgname.install"
+source=("git://git.mplayer2.org/mplayer2.git"
+        "$pkgname.install")
+sha256sums=("SKIP"
+            "547dd8fa8de0f4e688722c277a7848c180e96edf0fda4a48a3ec27e5ee675b8d")
+backup=("etc/mplayer/codecs.conf"
+        "etc/mplayer/input.conf")
+depends=("libdvdread" "libass" "ffmpeg" "libgl" "libxv" "fribidi" "libvdpau" "libpulse" "xvidcore" "libxss" "sdl"
+         "freetype2" "fontconfig" "desktop-file-utils")
+# The dependencies here are *required* to build by the default options. fribidi
+# is needed for libass. freetype2 and fontconfig are needed for mplayer itself
+# (yes, ./configure --help says they are autodetected, but it lies, they need to
+# be explicitly disabled)
+makedepends=("git" "yasm" "python" "python-docutils")
+conflicts=("mplayer" "mplayer2")
+provides=("mplayer" "mplayer2")
+options=("!emptydirs")
+
+pkgver() {
+  date -u +%Y%m%d
+}
+
+build() {
+	cd "$srcdir/$_gitname"
+
+  ./configure --prefix=/usr --confdir=/etc/mplayer
+	make
+}
+
+package() {
+	cd "$srcdir/$_gitname"
+	make DESTDIR="$pkgdir" install
+
+	install -m644 etc/{codecs,input,example}.conf "$pkgdir/etc/mplayer"
+	
+	install -dm755 "$pkgdir/usr/share/mplayer"
+	
+	ln -s "../fonts/TTF/DejaVuSans.ttf" "$pkgdir/usr/share/mplayer/subfont.ttf"
+	
+	sed -i 's/gmplayer/mplayer/g' "etc/mplayer.desktop"
+	install -Dm644 "etc/mplayer.desktop" "$pkgdir/usr/share/applications/mplayer.desktop"
+
+	install -Dm644 "etc/mplayer.xpm" "$pkgdir/usr/share/pixmaps/mplayer.xpm"
+}
