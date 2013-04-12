@@ -10,7 +10,7 @@ arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
 depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'pcre' 'libconfig')
-makedepends=('git' 'make' 'pkg-config' 'asciidoc' 'libgl')
+makedepends=('git' 'asciidoc')
 source=("git://github.com/chjj/compton.git")
 md5sums=("SKIP")
 
