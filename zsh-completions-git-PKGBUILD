@@ -1,0 +1,26 @@
+# Maintainer: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+
+pkgname=zsh-completions-git
+pkgver=20120808
+pkgrel=2
+pkgdesc="Additional completion definitions for Zsh"
+arch=(any)
+url="https://github.com/zsh-users/zsh-completions"
+license=(GPL)
+depends=(zsh)
+makedepends=(git)
+provides=(zsh-completions zsh-virtualbox zsh-packagekit zsh-yaourt zsh-bumblebee)
+conflicts=(zsh-completions zsh-virtualbox zsh-packagekit zsh-yaourt zsh-bumblebee)
+ 
+source=('git://github.com/zsh-users/zsh-completions.git')
+md5sums=('SKIP')
+ 
+pkgver() {
+  date -u +%Y%m%d
+}
+
+package() {
+	cd "$srcdir/${pkgname/-git}/src"
+	install -m0755 -d "$pkgdir/usr/share/zsh/site-functions"
+	install -m0644 _* "$pkgdir/usr/share/zsh/site-functions"
+}
