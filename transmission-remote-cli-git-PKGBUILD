@@ -13,7 +13,7 @@ depends=('python2')
 makedepends=('git')
 conflicts=('transmission-remote-cli')
 replaces=('transmission-remote-cli')
-optdepends=('python-geoip: Guess which country peers come from'
+optdepends=('python2-geoip: Guess which country peers come from'
             'adns-python: Resolve IPs to host names') 
 source=("git://github.com/fagga/transmission-remote-cli.git")
 md5sums=('SKIP')
