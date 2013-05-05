@@ -2,8 +2,8 @@
 # Contributor: SanskritFritz
 
 pkgname=transmission-remote-cli-git
-_gitname=transmission-remote-cli
-pkgver=20130412
+_gitname=${pkgname/-git}
+pkgver=v1.5.0.15.g27739ad
 pkgrel=1
 pkgdesc="Curses interface for the daemon of the BitTorrent client Transmission"
 arch=('any')
@@ -19,16 +19,17 @@ source=("git://github.com/fagga/transmission-remote-cli.git")
 md5sums=('SKIP')
 
 pkgver() {
-  date -u +%Y%m%d
+  cd "$_gitname"
+  git --no-pager describe --tags | sed 's:-:.:g'
 }
 
 build() {
-  cd "$srcdir/$_gitname"
+  cd "$_gitname"
   sed -i "s/python/python2/" transmission-remote-cli
 }
 
 package() {
-  cd "$srcdir/$_gitname"
+  cd "$_gitname"
   
   install -D -m755 "transmission-remote-cli" "${pkgdir}/usr/bin/transmission-remote-cli"
   install -D -m644 "transmission-remote-cli.1" "${pkgdir}/usr/share/man/man1/transmission-remote-cli.1"
