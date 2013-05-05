@@ -20,18 +20,18 @@ md5sums=('SKIP'
          '71601bc37fa44e4395580b321963018e')
 
 pkgver() {
-  cd $_gitname
+  cd "$_gitname"
   git log -1 --format="%cd.%h" --date=short | sed 's:-:.:g'
 }
 
 build() {
-  cd $_gitname
+  cd "$_gitname"
   ./autogen.sh && ./configure
   make
 }
 
 package() {
-  cd $_gitname
+  cd "$_gitname"
   install -Dm755 tmux "$pkgdir/usr/bin/tmux"
   install -Dm644 tmux.1 "$pkgdir/usr/share/man/man1/tmux.1"
   install -Dm644 examples/tmux.vim "$pkgdir/usr/share/vim/vimfiles/syntax/tmux.vim"
