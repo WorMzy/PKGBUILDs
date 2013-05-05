@@ -4,8 +4,8 @@
 # Based on PKGBUILD from Dan Zwell <dzwell@zwell.net>
 
 pkgname=btrfs-progs-git
-_gitname=btrfs-progs
-pkgver=20130407
+_gitname=${pkgname/-git}
+pkgver=v0.20.rc1.253.g7854c8b
 pkgrel=1
 pkgdesc="Btrfs filesystem utilities"
 arch=("i686" "x86_64")
@@ -19,17 +19,18 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git")
 md5sums=("SKIP")
 
 pkgver() {
-  date -u +%Y%m%d
+  cd "$_gitname"
+  git --no-pager describe --tags | sed 's:-:.:g'
 }
 
 build() {
-  cd "$srcdir/$_gitname"
+  cd "$_gitname"
   sed -i "s|-Werror|-Wno-error|" Makefile
   make all btrfs-zero-log
 }
 
 package() {
-  cd "$srcdir/$_gitname"
+  cd "$_gitname"
   make prefix="$pkgdir/usr" bindir="$pkgdir/sbin" install
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
   mv "$pkgdir/usr/man" "$pkgdir/usr/share/"
