@@ -20,7 +20,7 @@ sha256sums=('SKIP'
             'b32b52959e65de2482beece9790b9d6cc4ead9cbcb975391e37b58b1ef4f5abf')
 backup=("etc/mplayer/codecs.conf"
         "etc/mplayer/input.conf")
-depends=("libdvdread" "libass" "ffmpeg" "libgl" "libxv" "fribidi" "libvdpau" "libpulse" "xvidcore" "libxss" "sdl"
+depends=("libdvdread" "libdvdnav" "libass" "ffmpeg" "libgl" "libxv" "fribidi" "libvdpau" "libpulse" "xvidcore" "libxss" "sdl"
          "freetype2" "fontconfig" "desktop-file-utils")
 # The dependencies here are *required* to build by the default options. fribidi
 # is needed for libass. freetype2 and fontconfig are needed for mplayer itself
