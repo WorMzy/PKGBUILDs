@@ -32,7 +32,8 @@ provides=("mplayer" "mplayer2")
 options=("!emptydirs")
 
 pkgver() {
-  date -u +%Y%m%d
+  cd "$_gitname"
+  git describe | sed 's:-:.:g'
 }
 
 build() {
