@@ -3,11 +3,9 @@
 # Contributor: cantabile <cantabile dot desu at gmail dot com>
 # Contributor: extcake < extcake@gmail.com >
 
-_gitroot="git://git.mplayer2.org/mplayer2-build.git"
-
 pkgname=mplayer2-git
 _gitname="mplayer2"
-pkgver=20130412
+pkgver=v2.0.726.g6c87a98
 pkgrel=1
 pkgdesc="An advanced general-purpose video player."
 url="http://www.mplayer2.org"
@@ -16,8 +14,6 @@ arch=('x86_64' 'i686')
 install="$pkgname.install"
 source=("git://git.mplayer2.org/mplayer2.git"
         "$pkgname.install")
-sha256sums=('SKIP'
-            'b32b52959e65de2482beece9790b9d6cc4ead9cbcb975391e37b58b1ef4f5abf')
 sha256sums=('SKIP'
             '7394ba944d1b98a4407b4aa84a9dd057db7db9624648df0dac9e4f6289d8d7f1')
 backup=("etc/mplayer/codecs.conf"
