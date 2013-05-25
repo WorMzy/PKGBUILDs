@@ -32,10 +32,10 @@ build() {
 
 package() {
   cd "$_gitname"
-  make prefix="$pkgdir/usr" bindir="$pkgdir/sbin" install
+  make prefix="$pkgdir/usr" bindir="$pkgdir/usr/bin" install
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
   mv "$pkgdir/usr/man" "$pkgdir/usr/share/"
-  mv btrfs-zero-log "$pkgdir/sbin"
+  mv btrfs-zero-log "$pkgdir/usr/bin"
 }
 
 # vim:set ts=2 sw=2 et:
