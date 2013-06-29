@@ -7,7 +7,7 @@
 pkgname=btrfs-progs-git
 _gitname=${pkgname%-git}
 pkgver=v0.20.rc1.335.gf00dd83
-pkgrel=1
+pkgrel=2
 pkgdesc="Btrfs filesystem utilities"
 arch=("i686" "x86_64")
 url="http://btrfs.wiki.kernel.org/index.php/Main_Page"
@@ -35,7 +35,6 @@ package() {
   make prefix="$pkgdir/usr" bindir="$pkgdir/usr/bin" install
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
   mv "$pkgdir/usr/man" "$pkgdir/usr/share/"
-  mv btrfs-zero-log "$pkgdir/usr/bin"
 }
 
 # vim:set ts=2 sw=2 et:
