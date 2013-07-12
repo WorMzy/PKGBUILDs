@@ -6,8 +6,8 @@
 
 pkgname=btrfs-progs-git
 _gitname=${pkgname%-git}
-pkgver=v0.20.rc1.335.gf00dd83
-pkgrel=2
+pkgver=v0.20.rc1.358.g194aa4a
+pkgrel=1
 pkgdesc="Btrfs filesystem utilities"
 arch=("i686" "x86_64")
 url="http://btrfs.wiki.kernel.org/index.php/Main_Page"

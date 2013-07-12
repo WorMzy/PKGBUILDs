@@ -1,8 +1,8 @@
 # Maintainer: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
 
 pkgname=zsh-completions-git
-pkgver=20120808
-pkgrel=2
+pkgver=20130712
+pkgrel=1
 pkgdesc="Additional completion definitions for Zsh"
 arch=(any)
 url="https://github.com/zsh-users/zsh-completions"
