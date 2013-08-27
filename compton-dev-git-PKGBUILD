@@ -1,0 +1,47 @@
+# Maintainer: WorMzy Tykashi <wormzy.tykashi@gmail.com>
+# Contributor: OK100 <ok100 at lavabit dot com>
+# Previous Maintainer: Valère Monseur <valere dot monseur at ymail dot com>
+
+pkgname=compton-dev-git
+_gitname=compton
+pkgver=2013.08.13.g6037eb2
+pkgrel=1
+pkgdesc="X Compositor (development branch)"
+arch=(i686 x86_64)
+url="https://github.com/chjj/compton"
+license=('MIT')
+depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'libxinerama' 'pcre' 'libconfig')
+makedepends=('git' 'asciidoc')
+conflicts=('compton-git')
+provides=('compton')
+source=("git://github.com/chjj/compton.git")
+
+md5sums=("SKIP")
+
+pkgver() {
+    cd "${srcdir}/${_gitname}"
+    git log -1 --format="%cd.g%h" --date=short | sed 's/-/./g'
+}
+
+prepare() {
+  cd "$_gitname"
+  git checkout richardgv-dev
+}
+
+build() {
+  cd "$srcdir/$_gitname"
+  make PREFIX=/usr
+  make docs
+}
+
+package() {
+  cd "$srcdir/$_gitname"
+
+  make PREFIX="$pkgdir/usr" install
+
+  # install license
+  install -D -m644 "LICENSE" "$pkgdir/usr/share/licenses/$_gitname/LICENSE"
+
+  # example conf
+  install -D -m644 "compton.sample.conf" "$pkgdir/etc/xdg/compton.conf.example"
+}
