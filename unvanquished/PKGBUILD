@@ -87,7 +87,7 @@ package() {
   ln -s . .Unvanquished
 
   #make cache dir
-  install -d "$pkgdir/var/cache/$_name/update-paks"
+  install -dm755 "$pkgdir/var/cache/$_name/update-paks"
 
   # rename directory to all lowercase for compatibility reasons
   cd "$pkgdir/opt"
