@@ -21,8 +21,8 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
         "initcpio-hook-btrfs::${_url}initcpio-hook-btrfs?h=packages/btrfs-progs"
         "initcpio-install-btrfs::${_url}initcpio-install-btrfs?h=packages/btrfs-progs")
 md5sums=('SKIP'
-         '9fb35142755b477a96cb7292f3d64839'
-         'e5186ec3fe8a809b7473470128d1c4ab')
+         'b09688a915a0ec8f40e2f5aacbabc9ad'
+         '7241ba3a4286d08da0d50b7176941112')
 
 pkgver() {
   cd "$_gitname"
