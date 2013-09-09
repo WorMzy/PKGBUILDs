@@ -7,7 +7,7 @@
 pkgname=btrfs-progs-git
 _gitname=${pkgname%-git}
 pkgver=v0.20.rc1.358.g194aa4a
-pkgrel=1
+pkgrel=2
 pkgdesc="Btrfs filesystem utilities"
 arch=("i686" "x86_64")
 url="http://btrfs.wiki.kernel.org/index.php/Main_Page"
@@ -32,7 +32,7 @@ pkgver() {
 build() {
   cd "$_gitname"
   sed -i "s|-Werror|-Wno-error|" Makefile
-  make CFLAGS="$CFLAGS" all
+  make CFLAGS="$CFLAGS" all btrfs-select-super
 }
 
 package() {
@@ -43,6 +43,7 @@ package() {
   cd "$_gitname"
   # install compiled software + readme
   make prefix="$pkgdir/usr" bindir="$pkgdir/usr/bin" install
+  install -m755 btrfs-select-super "$pkgdir/usr/bin/btrfs-select-super"
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
 
   # fix manpage location
