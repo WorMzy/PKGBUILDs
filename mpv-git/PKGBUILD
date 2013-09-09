@@ -2,7 +2,7 @@
 # Based on the mplayer2-lite-git PKGBUILD
 
 pkgname=mpv-git
-pkgver=0.35913.c181ae8
+pkgver=0.35964.494d408
 pkgrel=1
 pkgdesc="A movie player and encoder for linux (uses dynamically linked ffmpeg; git version)"
 arch=('i686' 'x86_64')
@@ -52,7 +52,6 @@ package() {
   install -m644 ${srcdir}/${_gitname}/etc/{input,example,encoding-example-profiles}.conf "${pkgdir}/usr/share/doc/mpv/examples"
   install -m644 ${srcdir}/${_gitname}/DOCS/{encoding.rst,tech-overview.txt} "${pkgdir}/usr/share/doc/mpv"
   install -m755 ${srcdir}/${_gitname}/TOOLS/mpv_identify.sh "${pkgdir}/usr/bin"
-  install -Dm644 "${srcdir}/${_gitname}/etc/mplayer.xpm" "${pkgdir}/usr/share/pixmaps/mpv.xpm"
 
   # file association
   install -Dm644 "${srcdir}/mpv.desktop" "${pkgdir}/usr/share/applications/mpv.desktop"
