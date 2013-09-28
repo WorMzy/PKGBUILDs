@@ -2,12 +2,12 @@
 # Based on the mplayer2-lite-git PKGBUILD
 
 pkgname=mpv-git
-pkgver=0.35964.494d408
+pkgver=0.36143.9d39438
 pkgrel=1
-pkgdesc="A movie player and encoder for linux (uses dynamically linked ffmpeg; git version)"
+pkgdesc='Video player based on MPlayer/mplayer2'
 arch=('i686' 'x86_64')
 license=('GPL')
-url="https://github.com/mpv-player/mpv"
+url='http://mpv.io'
 depends=('libpulse' 'ffmpeg' 'lcms2' 'libdvdread' 'libmng' 'libxinerama' 'libxss' 'desktop-file-utils' 'libquvi' 'libxv')
 makedepends=('git' 'libgl' 'python-docutils')
 provides=('mpv')
@@ -34,6 +34,7 @@ build() {
   # Custom CFLAGS break the mpv build
   unset CFLAGS
   unset LDFLAGS
+
   cd "$srcdir/$_gitname"
 
   ./configure --prefix=/usr
@@ -51,7 +52,6 @@ package() {
   # some extra useful stuff "make install" doesn't install
   install -m644 ${srcdir}/${_gitname}/etc/{input,example,encoding-example-profiles}.conf "${pkgdir}/usr/share/doc/mpv/examples"
   install -m644 ${srcdir}/${_gitname}/DOCS/{encoding.rst,tech-overview.txt} "${pkgdir}/usr/share/doc/mpv"
-  install -m755 ${srcdir}/${_gitname}/TOOLS/mpv_identify.sh "${pkgdir}/usr/bin"
 
   # file association
   install -Dm644 "${srcdir}/mpv.desktop" "${pkgdir}/usr/share/applications/mpv.desktop"
