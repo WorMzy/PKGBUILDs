@@ -4,7 +4,7 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=2013.08.13.g6037eb2
+pkgver=2013.09.18.g4bd3db2
 pkgrel=1
 pkgdesc="X Compositor (development branch)"
 arch=(i686 x86_64)
@@ -12,7 +12,7 @@ url="https://github.com/chjj/compton"
 license=('MIT')
 depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'libxinerama' 'pcre' 'libconfig')
 makedepends=('git' 'asciidoc')
-conflicts=('compton-git')
+conflicts=('compton-git' 'compton')
 provides=('compton')
 source=("git://github.com/chjj/compton.git")
 
