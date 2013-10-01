@@ -4,9 +4,9 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=2013.09.18.g4bd3db2
+pkgver=2013.10.01.g796e2c6
 pkgrel=1
-pkgdesc="X Compositor (development branch)"
+pkgdesc="X Compositor (Richard Grenville's development branch)"
 arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
@@ -14,18 +14,13 @@ depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'libxinerama' '
 makedepends=('git' 'asciidoc')
 conflicts=('compton-git' 'compton')
 provides=('compton')
-source=("git://github.com/chjj/compton.git")
+source=("git://github.com/chjj/compton.git#branch=richardgv-dev")
 
 md5sums=("SKIP")
 
 pkgver() {
     cd "${srcdir}/${_gitname}"
     git log -1 --format="%cd.g%h" --date=short | sed 's/-/./g'
-}
-
-prepare() {
-  cd "$_gitname"
-  git checkout richardgv-dev
 }
 
 build() {
