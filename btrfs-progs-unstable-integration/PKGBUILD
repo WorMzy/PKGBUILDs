@@ -13,7 +13,7 @@ makedepends=('git')
 provides=('btrfs-progs')
 conflicts=('btrfs-progs' 'btrfs-progs-git' 'btrfs-progs-integration-git')
 _url=https://projects.archlinux.org/svntogit/packages.git/plain/trunk/
-source=(btrfs-progs-unstable::"git://repo.or.cz/btrfs-progs-unstable/devel.git#branch=integration-${pkgver/./-}"
+source=(btrfs-progs-unstable::git+"http://repo.or.cz/r/btrfs-progs-unstable/devel.git#branch=integration-${pkgver/./-}"
         "initcpio-hook-btrfs::${_url}initcpio-hook-btrfs?h=packages/btrfs-progs"
         "initcpio-install-btrfs::${_url}initcpio-install-btrfs?h=packages/btrfs-progs")
 md5sums=('SKIP'
