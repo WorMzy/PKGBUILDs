@@ -10,7 +10,7 @@ pkgrel=1
 arch=('i686' 'x86_64')
 url="http://developer.berlios.de/projects/slim/"
 license=('GPL2')
-makedepends=('git' 'cmake' 'pam' 'libxmu' 'libpng' 'libjpeg' 'libxft' 'libxrandr' 'xorg-xauth')
+makedepends=('git' 'cmake' 'pam' 'libxmu' 'libpng' 'libjpeg' 'libxft' 'libxrandr')
 source=('git://git.berlios.de/slim'
         'slimlock-git.install'
         'slim.conf'
@@ -53,7 +53,7 @@ build() {
 package_slim-git() {
   pkgdesc="Desktop-independent graphical login manager for X11 (git)"
   depends=('pam' 'libxmu' 'libpng' 'libjpeg' 'libxft' 'libxrandr')
-  cnflicts=('slim')
+  conflicts=('slim')
   provides=('slim')
   backup=('etc/slim.conf' 'etc/logrotate.d/slim' 'etc/pam.d/slim')
   cd "$_gitname"
