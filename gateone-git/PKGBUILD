@@ -1,0 +1,32 @@
+# Maintainer: WorMzy Tykashi <wormzy.tykashi@gmail.com>
+# Contributor: Ankz <ankz . kothari at gmail.com>
+# Contributor: Figue <ffigue at gmail.com>
+pkgname=gateone-git
+_gitname="GateOne"
+pkgver=v1.1_r325.g87fb663
+pkgrel=1
+pkgdesc="Web-based terminal emulator and SSH client"
+arch=('any')
+url="https://github.com/liftoff/GateOne"
+license=('AGPL3')
+depends=('python2-tornado' 'python2' 'python2-futures')
+optdepends=('python2-imaging' 'python2-pyopenssl' 'dtach')
+makedepends=('git')
+backup=()
+
+source=(git+"https://github.com/liftoff/GateOne.git")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$_gitname"
+  git describe | sed -e 's:-:_r:' -e 's:-:.:g'
+}
+
+package() {
+  cd "$srcdir/$_gitname"
+  python2 setup.py install --root="$pkgdir/"
+  install -D ./scripts/init/gateone.service "$pkgdir/usr/lib/systemd/system/gateone.service"
+  cd "$pkgdir/opt/gateone"
+  sed -e 's#/usr/bin/env python#/usr/bin/env python2#g' -i $(grep -lR '^#!/usr/bin/env python$')
+}
+
