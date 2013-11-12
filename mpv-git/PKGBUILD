@@ -2,13 +2,13 @@
 # Based on the mplayer2-lite-git PKGBUILD
 
 pkgname=mpv-git
-pkgver=0.36311.74e7043
+pkgver=0.36446.84dcb76
 pkgrel=1
 pkgdesc='Video player based on MPlayer/mplayer2'
 arch=('i686' 'x86_64')
 license=('GPL')
 url='http://mpv.io'
-depends=('libpulse' 'ffmpeg' 'lcms2' 'libdvdread' 'libmng' 'libxinerama' 'libxss' 'desktop-file-utils' 'libquvi' 'libxv')
+depends=('libpulse' 'ffmpeg' 'lcms2' 'libdvdread' 'libxinerama' 'libxss' 'desktop-file-utils' 'libquvi' 'libxv' 'libcdio-paranoia')
 makedepends=('git' 'libgl' 'python-docutils')
 provides=('mpv')
 conflicts=('mpv')
