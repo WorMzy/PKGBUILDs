@@ -3,7 +3,7 @@
 # Contributor: Martin F. Schumann <mfs@mfs.name>
 
 pkgname=unvanquished
-pkgver=0.20.0
+pkgver=0.21.0
 pkgrel=1
 pkgdesc="A team-based fps/rts hybrid game which pits aliens against humans. Monthly release that can be played on official servers."
 arch=('x86_64' 'i686')
@@ -77,7 +77,7 @@ package() {
 
   # setup server directory 
   install -dm755 "$pkgdir/srv/$_name/main"
-  cd config
+  cd configfiles
   for _file in *; do
     install -m660 "$_file" "$pkgdir/srv/$_name/main/$_file"
   done
