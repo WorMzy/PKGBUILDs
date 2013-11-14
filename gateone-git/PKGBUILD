@@ -9,9 +9,9 @@ pkgdesc="Web-based terminal emulator and SSH client"
 arch=('any')
 url="https://github.com/liftoff/GateOne"
 license=('AGPL3')
-depends=('python2-tornado' 'python2' 'python2-futures')
+depends=('python2-tornado' 'python2' 'python2-futures' 'python2-setuptools')
 optdepends=('python2-imaging' 'python2-pyopenssl' 'dtach')
-makedepends=('git' 'python2-setuptools')
+makedepends=('git')
 options=(emptydirs)
 install=${pkgname}.install
 source=(git+"https://github.com/liftoff/GateOne.git")
@@ -29,9 +29,9 @@ package() {
   # fix file locations
   cd "$pkgdir/usr/gateone"
   for dir in *; do
-    mv "$dir" "$pkgdir/usr/lib/python2.7/site-packages/gateone"
+    cp -r "$dir" "$pkgdir/usr/lib/python2.7/site-packages/gateone"
   done
-  rmdir "$pkgdir/usr/gateone"
+  rm -r "$pkgdir/usr/gateone"
 
   # create empty conf dir
   install -dm755 "$pkgdir/etc/gateone/conf.d"
