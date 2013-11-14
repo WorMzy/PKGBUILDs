@@ -16,6 +16,7 @@ depends=('glibc' 'e2fsprogs' 'lzo2')
 makedepends=('git')
 provides=('btrfs-progs')
 conflicts=('btrfs-progs')
+changelog=changelog.txt
 _url=https://projects.archlinux.org/svntogit/packages.git/plain/trunk/
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
         "initcpio-hook-btrfs::${_url}initcpio-hook-btrfs?h=packages/btrfs-progs"
