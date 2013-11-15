@@ -24,14 +24,8 @@ pkgver() {
 
 package() {
   cd "$srcdir/$_gitname"
-  python2 setup.py install --root="$pkgdir/"
-  install -D ./scripts/init/gateone.service "$pkgdir/usr/lib/systemd/system/gateone.service"
-  # fix file locations
-  cd "$pkgdir/usr/gateone"
-  for dir in *; do
-    cp -r "$dir" "$pkgdir/usr/lib/python2.7/site-packages/gateone"
-  done
-  rm -r "$pkgdir/usr/gateone"
+  python2 setup.py install --root="$pkgdir/" --install-data="/usr/lib/python2.7/site-packages/"
+  install -D scripts/init/gateone.service "$pkgdir/usr/lib/systemd/system/gateone.service"
 
   # create empty conf dir
   install -dm755 "$pkgdir/etc/gateone/conf.d"
