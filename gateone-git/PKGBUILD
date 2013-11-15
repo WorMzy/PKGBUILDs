@@ -4,7 +4,7 @@
 
 pkgname=gateone-git
 _gitname="GateOne"
-pkgver=v1.1_r332.gb414e57
+pkgver=v1.1_r333.g0aecd45
 pkgrel=1
 pkgdesc="Web-based terminal emulator and SSH client"
 arch=('any')
