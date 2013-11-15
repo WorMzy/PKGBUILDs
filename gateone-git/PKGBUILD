@@ -1,6 +1,7 @@
 # Maintainer: WorMzy Tykashi <wormzy.tykashi@gmail.com>
 # Contributor: Ankz <ankz . kothari at gmail.com>
 # Contributor: Figue <ffigue at gmail.com>
+
 pkgname=gateone-git
 _gitname="GateOne"
 pkgver=v1.1_r332.gb414e57
@@ -31,3 +32,4 @@ package() {
   install -dm755 "$pkgdir/etc/gateone/conf.d"
 }
 
+# vim:set ts=2 sw=2 et:
