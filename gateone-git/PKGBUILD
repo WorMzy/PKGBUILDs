@@ -4,7 +4,7 @@
 
 pkgname=gateone-git
 _gitname="GateOne"
-pkgver=v1.1_r333.g0aecd45
+pkgver=v1.1_r348.ga4f18f2
 pkgrel=1
 pkgdesc="Web-based terminal emulator and SSH client"
 arch=('any')
@@ -25,8 +25,10 @@ pkgver() {
 
 package() {
   cd "$srcdir/$_gitname"
-  python2 setup.py install --root="$pkgdir/" --install-data="/usr/lib/python2.7/site-packages/"
-  install -D scripts/init/gateone.service "$pkgdir/usr/lib/systemd/system/gateone.service"
+  python2 setup.py install --root="$pkgdir/"
+
+  # strip pkgdir reference from service file
+  sed -i "s:$pkgdir::" "$pkgdir/usr/lib/systemd/system/gateone.service"
 
   # create empty conf dir
   install -dm755 "$pkgdir/etc/gateone/conf.d"
