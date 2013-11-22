@@ -4,14 +4,14 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=2013.10.01.g796e2c6
+pkgver=2013.11.10.gc02a867
 pkgrel=1
 pkgdesc="X Compositor (Richard Grenville's development branch)"
 arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
 depends=('libgl' 'dbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'libxinerama' 'pcre' 'libconfig')
-makedepends=('git' 'asciidoc')
+makedepends=('git' 'asciidoc' 'mesa')
 conflicts=('compton-git' 'compton')
 provides=('compton')
 source=("git://github.com/chjj/compton.git#branch=richardgv-dev")
