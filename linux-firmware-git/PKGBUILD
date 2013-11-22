@@ -1,7 +1,7 @@
 # Based on linux-firmware by Thomas Bächler <thomas@archlinux.org>
 # Maintainer: xduugu
 pkgname=linux-firmware-git
-pkgver=400.600caef
+pkgver=418.7d0c7a8
 pkgrel=1
 pkgdesc="Firmware files for Linux"
 arch=('any')

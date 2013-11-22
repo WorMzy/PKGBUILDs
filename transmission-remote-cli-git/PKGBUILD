@@ -4,7 +4,7 @@
 
 pkgname=transmission-remote-cli-git
 _gitname=${pkgname%-git}
-pkgver=v1.6.2.6.g6f06910
+pkgver=v1.6.3
 pkgrel=1
 pkgdesc="Curses interface for the daemon of the BitTorrent client Transmission"
 arch=('any')
