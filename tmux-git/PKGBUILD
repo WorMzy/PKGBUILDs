@@ -5,7 +5,7 @@
 
 pkgname=tmux-git
 _gitname=tmux-code
-pkgver=2013.11.14.3e498cd
+pkgver=2013.12.09.ccf39fc
 pkgrel=1
 pkgdesc="A terminal multiplexer"
 url="http://tmux.sourceforge.net/"
