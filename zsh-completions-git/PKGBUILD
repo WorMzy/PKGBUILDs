@@ -2,7 +2,7 @@
 
 pkgname=zsh-completions-git
 _gitname=${pkgname%-git}
-pkgver=2013.11.19.2791693
+pkgver=2013.11.27.1d6a2aa
 pkgrel=1
 pkgdesc="Additional completion definitions for Zsh"
 arch=(any)
@@ -12,10 +12,10 @@ depends=(zsh)
 makedepends=(git)
 provides=(zsh-completions zsh-virtualbox zsh-packagekit zsh-yaourt zsh-bumblebee)
 conflicts=(zsh-completions zsh-virtualbox zsh-packagekit zsh-yaourt zsh-bumblebee)
- 
+
 source=('git://github.com/zsh-users/zsh-completions.git')
 md5sums=('SKIP')
- 
+
 pkgver() {
   cd "$srcdir/$_gitname"
   git log -1 --format="%cd.%h" --date=short | sed 's:-:.:g'
