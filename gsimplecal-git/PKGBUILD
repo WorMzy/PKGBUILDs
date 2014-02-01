@@ -3,7 +3,7 @@
 
 pkgname=gsimplecal-git
 _gitname=gsimplecal
-pkgver=2013.11.06.aecda27
+pkgver=2013.11.13.1bc88c7
 pkgrel=1
 pkgdesc="Simple and lightweight GTK calendar (git)"
 arch=('i686' 'x86_64')
