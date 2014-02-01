@@ -8,7 +8,7 @@ pkgdesc='Video player based on MPlayer/mplayer2'
 arch=('i686' 'x86_64')
 license=('GPL')
 url='http://mpv.io'
-depends=('libpulse' 'ffmpeg' 'lcms2' 'libdvdread' 'libxinerama' 'libxss' 'desktop-file-utils' 'libquvi' 'libxv' 'libcdio-paranoia')
+depends=('libpulse' 'ffmpeg' 'lcms2' 'libdvdread' 'libxinerama' 'libxss' 'desktop-file-utils' 'libquvi' 'libxv' 'libcdio-paranoia' 'hicolor-icon-theme')
 makedepends=('git' 'libgl' 'python-docutils')
 provides=('mpv')
 conflicts=('mpv')
@@ -19,7 +19,7 @@ source=('git+http://github.com/mpv-player/mpv#branch=master'
         'mpv-git.install')
 md5sums=('SKIP'
          '5753c2001c302b1e43ddee1cf063c0bc'
-         'cbc234e5e789e30c624741173992a225')
+         'a29f3995a1505052e45e758853721885')
 
 _gitname="mpv"
 
