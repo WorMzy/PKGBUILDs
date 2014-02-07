@@ -1,13 +1,25 @@
-[34mfad2c64[m ([32mThu Feb 6 20:38:09 2014 +0100[m) - David Sterba
+[34mdd5ffdb[m ([32mFri Feb 7 18:55:37 2014 +0100[m) - David Sterba
    [34m└[m Merge branch 'integration-next' into integration
 
-[34mc9e3046[m ([32mMon Oct 14 12:59:56 2013 +0800[m) - Liu Bo
+[34madf9a8a[m ([32mFri Feb 7 09:21:00 2014 -0600[m) - Mitch Harder
+   [34m└[m btrfs-progs: Change BUG() to use assert.
+
+[34m949482b[m ([32mFri Feb 7 15:07:19 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Add missing devices check for mounted btrfs.
+
+[34m6fcd044[m ([32mThu Feb 6 15:29:18 2014 +0100[m) - David Disseldorp
+   [34m└[m ioctl: add note regarding CLONE_RANGE(len=0) behaviour
+
+[34m4a55e02[m ([32mWed Feb 5 20:57:51 2014 +0800[m) - Anand Jain
+   [34m└[m btrfs-progs: fix typo in reported error
+
+[34m7fd4c69[m ([32mMon Oct 14 12:59:56 2013 +0800[m) - Liu Bo
    [34m└[m Btrfs-progs: add dedup subcommand
 
-[34mee10bbc[m ([32mTue Jan 14 19:17:08 2014 +0800[m) - Anand Jain
+[34m0395d59[m ([32mTue Jan 14 19:17:08 2014 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: mid flight return leaks memory during filesystem show mnt
 
-[34m31d28c0[m ([32mThu Dec 19 16:38:41 2013 +0800[m) - Anand Jain
+[34mb04c231[m ([32mThu Dec 19 16:38:41 2013 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: fs show should handle if subvol(s) mounted
 
 [34m386c3bb[m ([32mFri Nov 15 19:25:33 2013 +0800[m) - Anand Jain
@@ -135,16 +147,4 @@
 
 [34mb94a300[m ([32mMon Dec 2 14:11:54 2013 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: fix backref after init-csum-tree
-
-[34m4956a16[m ([32mMon Dec 2 14:11:53 2013 +0800[m) - Anand Jain
-   [34m└[m btrfs-progs: Turning ON incompat isn't an error
-
-[34m9df48a7[m ([32mThu Nov 28 13:32:52 2013 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: scan devices in parallel for chunk-recover
-
-[34m4989dc8[m ([32mThu Nov 28 13:32:51 2013 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: add chunk-recover raid0/5/6 data stripes rebuild routine
-
-[34m7af8e4e[m ([32mThu Nov 28 13:32:50 2013 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: skip chunk recover works when check chunks successfully
 
