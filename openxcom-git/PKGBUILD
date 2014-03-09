@@ -1,5 +1,5 @@
-# Maintainer: Stefan Karner <stefan.karner at student.tuwien.ac.at>
-# Contributor: WorMzy Tykashi <wormzy.tykashi@gmail.com>
+# Maintainer: WorMzy Tykashi <wormzy.tykashi@gmail.com>
+# Contributor: Stefan Karner <stefan.karner at student.tuwien.ac.at>
 
 pkgname=openxcom-git
 _gitname=OpenXcom
