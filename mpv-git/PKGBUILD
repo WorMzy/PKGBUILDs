@@ -1,5 +1,6 @@
-# Maintainer: RudolfPolzer <divVerent@xonotic.org>
-# Based on the mplayer2-lite-git PKGBUILD
+# Maintainer: Rudolf Polzer <divVerent@xonotic.org>
+# Contributor:  Bartłomiej Piotrowski <nospam@bpiotrowski.pl>
+# Contributor: Eivind Uggedal <eivind@uggedal.com>
 
 pkgname=mpv-git
 pkgver=0.37218.eb17780
