@@ -32,7 +32,7 @@ build() {
   cd "$srcdir/$_gitname"
 
   ./bootstrap.py
-  ./waf configure --prefix=/usr
+  ./waf configure --prefix=/usr --confdir=/etc/mpv 
 
   ./waf build
 }
