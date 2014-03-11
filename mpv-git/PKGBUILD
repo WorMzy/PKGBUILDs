@@ -3,6 +3,7 @@
 # Contributor: Eivind Uggedal <eivind@uggedal.com>
 
 pkgname=mpv-git
+_gitname=mpv
 pkgver=0.37218.eb17780
 pkgrel=1
 pkgdesc='Video player based on MPlayer/mplayer2'
@@ -21,8 +22,6 @@ source=('git+http://github.com/mpv-player/mpv#branch=master'
 md5sums=('SKIP'
          '5753c2001c302b1e43ddee1cf063c0bc'
          'a29f3995a1505052e45e758853721885')
-
-_gitname="mpv"
 
 pkgver() {
   cd "$srcdir/$_gitname"
