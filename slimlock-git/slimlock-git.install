@@ -1,9 +1,0 @@
-post_install() {
-  cat <<EOF
----------------------------------------------------------------
-Please note that slimlock gets it's theme information from
-/etc/slim.conf, not /etc/slimlock.conf. Plenty of additional
-themes are available on the AUR.
----------------------------------------------------------------
-EOF
-}
