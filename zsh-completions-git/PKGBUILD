@@ -2,7 +2,7 @@
 
 pkgname=zsh-completions-git
 _gitname=${pkgname%-git}
-pkgver=2013.11.27.1d6a2aa
+pkgver=2014.02.23.107bdab
 pkgrel=1
 pkgdesc="Additional completion definitions for Zsh"
 arch=(any)
