@@ -17,11 +17,9 @@ conflicts=('mpv')
 options=(!emptydirs)
 install=mpv.install
 source=('git+http://github.com/mpv-player/mpv#branch=master'
-        'mpv.desktop'
-        'mpv-git.install')
+        'mpv.desktop')
 md5sums=('SKIP'
-         '5753c2001c302b1e43ddee1cf063c0bc'
-         'a29f3995a1505052e45e758853721885')
+         '5753c2001c302b1e43ddee1cf063c0bc')
 
 pkgver() {
   cd "$srcdir/$_gitname"
