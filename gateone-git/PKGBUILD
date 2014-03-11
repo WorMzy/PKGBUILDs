@@ -4,13 +4,13 @@
 
 pkgname=gateone-git
 _gitname="GateOne"
-pkgver=v1.1_r364.gefe8cd4
+pkgver=v1.1_r377.gc01f57c
 pkgrel=1
 pkgdesc="Web-based terminal emulator and SSH client"
 arch=('any')
 url="https://github.com/liftoff/GateOne"
 license=('AGPL3')
-depends=('python2' 'python2-tornado' 'python2-futures' 'python2-setuptools')
+depends=('python2' 'python2-tornado' 'python2-futures' 'python2-setuptools' 'python2-html5lib')
 optdepends=('python2-imaging' 'python2-pyopenssl' 'dtach')
 makedepends=('git' 'systemd')
 # systemd needs to be in makedepends for building in clean chroot
