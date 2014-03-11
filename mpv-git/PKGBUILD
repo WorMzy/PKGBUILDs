@@ -15,7 +15,7 @@ makedepends=('git' 'libgl' 'python-docutils')
 provides=('mpv')
 conflicts=('mpv')
 options=(!emptydirs)
-install=mpv-git.install
+install=mpv.install
 source=('git+http://github.com/mpv-player/mpv#branch=master'
         'mpv.desktop'
         'mpv-git.install')
