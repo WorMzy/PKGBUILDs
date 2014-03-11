@@ -4,7 +4,7 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=2013.12.10.gfbd70e1
+pkgver=2014.03.11.g9950d08
 pkgrel=1
 pkgdesc="X Compositor (Richard Grenville's development branch)"
 arch=(i686 x86_64)
