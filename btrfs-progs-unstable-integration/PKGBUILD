@@ -9,7 +9,7 @@ arch=("i686" "x86_64")
 url="http://btrfs.wiki.kernel.org/index.php/Main_Page"
 license=('GPL')
 depends=('glibc' 'e2fsprogs' 'lzo2' 'zlib')
-makedepends=('git')
+makedepends=('git' 'asciidoc' 'xmlto')
 provides=('btrfs-progs')
 conflicts=('btrfs-progs' 'btrfs-progs-git' 'btrfs-progs-integration-git')
 changelog=changelog.txt
@@ -35,9 +35,6 @@ package() {
   make prefix="$pkgdir/usr" bindir="$pkgdir/usr/bin" install
   install -m755 btrfs-select-super "$pkgdir/usr/bin/btrfs-select-super"
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
-
-  # fix manpage location
-  mv "$pkgdir/usr/man" "$pkgdir/usr/share/"
 }
 
 check() {
