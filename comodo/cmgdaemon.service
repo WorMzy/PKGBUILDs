@@ -1,6 +1,6 @@
 [Unit]
 Description=Comodo Antivirus Daemon
-After=cmgagent.service
+After=cmdagent.service
 
 [Service]
 Type=forking

@@ -3,7 +3,7 @@
 pkgname=comodo
 pkgver=1.1.268025
 _revision=1
-pkgrel=3
+pkgrel=4
 pkgdesc="An antivirus suite with real-time protection"
 arch=('x86_64' 'i686')
 url="https://www.comodo.com/"
@@ -25,11 +25,11 @@ source=("http://cdn.download.comodo.com/cavmgl/download/installs/1000/standalone
 [[ $CARCH == 'x86_64' ]] && md5sums=('555ee6f51d116d2462962a2e4256aeba' \
                                      'cf564cf0421e14d1121eaa7112003c1e' \
                                      '372d8c3171424cb9e3ab0797842a7f77' \
-                                     '7c9f0c5a99cb89702dcad0d2f8392b2d')
+                                     'be4bb222442f2668075dc175cbbe964c')
 [[ $CARCH == 'i686' ]] && md5sums=('94c3b08023754ecc09c81be1cc5e7ba0' \
                                    'cf564cf0421e14d1121eaa7112003c1e' \
                                    '372d8c3171424cb9e3ab0797842a7f77' \
-                                   '7c9f0c5a99cb89702dcad0d2f8392b2d')
+                                   'be4bb222442f2668075dc175cbbe964c')
 
 package() {
   # dump opt files to /opt
