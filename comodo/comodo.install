@@ -8,11 +8,19 @@ post_install() {
   fi
   /usr/bin/printf ' Run /opt/COMODO/post_setup.sh as root to configure\n'
   /usr/bin/printf '                 this application.\n'
-  /usr/bin/printf '\n'
-  /usr/bin/printf ' Install the headers for your kernel before running\n'
-  /usr/bin/printf '  post_setup.sh if you want real-time protection.\n'
-  /usr/bin/printf ' You will need te re-run this script every time you\n'
-  /usr/bin/printf '    update your kernel, to generate new modules.\n'
+  if [[ "$1" != "update" ]]; then
+    /usr/bin/printf '\n'
+    /usr/bin/printf '    After running post_setup, start the cmdagent\n'
+    /usr/bin/printf ' # systemctl start cmdagent.service\n'
+    /usr/bin/printf '  Then run /opt/COMODO/cav as your normal user and\n'
+    /usr/bin/printf '          update your virus definitions\n'
+    /usr/bin/printf '\n'
+    /usr/bin/printf ' Finally, if you want the mail scanner, you need to\n'
+    /usr/bin/printf '           start cmgdaemon.service\n'
+    /usr/bin/printf ' # systemctl start cmgdaemon.service\n'
+    /usr/bin/printf '\n'
+    /usr/bin/printf '  Remember to enable the services you want running\n'
+  fi
   /usr/bin/printf '----------------------------------------------------\n'
 }
 
@@ -26,5 +34,5 @@ post_remove() {
 }
 
 post_upgrade() {
-  post_install update
+  update-desktop-database -q
 }
