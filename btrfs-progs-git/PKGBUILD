@@ -41,7 +41,7 @@ package() {
 
   cd "$_gitname"
   # install compiled software + readme
-  make prefix="$pkgdir/usr" bindir="$pkgdir/usr/bin" install
+  make prefix="$pkgdir/usr" install
   install -m755 btrfs-select-super "$pkgdir/usr/bin/btrfs-select-super"
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
 
