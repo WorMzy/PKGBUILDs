@@ -3,7 +3,7 @@
 pkgname=comodo
 pkgver=1.1.268025
 _revision=1
-pkgrel=4
+pkgrel=5
 pkgdesc="An antivirus suite with real-time protection"
 arch=('x86_64' 'i686')
 url="https://www.comodo.com/"
@@ -14,7 +14,8 @@ depends=('bzip2' 'expat' 'fontconfig' 'freetype2' 'gcc-libs' 'glib2' 'glibc' 'li
 optdepends=('postfix'
             'exim'
             'qmail'
-            'sendmail')
+            'sendmail'
+            'comodo-modules: real-time protection')
 options=(!strip)
 install=comodo.install
 source=("http://cdn.download.comodo.com/cavmgl/download/installs/1000/standalone/CAV_LINUX-${pkgver}-${_revision}.${CARCH}.rpm"
