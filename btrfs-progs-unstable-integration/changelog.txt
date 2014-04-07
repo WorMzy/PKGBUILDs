@@ -1,150 +1,150 @@
-[34m4243eeb[m ([32mTue Mar 11 01:01:46 2014 +0100[m) - David Sterba
+[34m977d17c[m ([32mThu Apr 3 19:54:44 2014 +0200[m) - David Sterba
+   [34m└[m Merge branch 'qu/asciidoc' into integration
+
+[34m8638b28[m ([32mThu Apr 3 19:54:24 2014 +0200[m) - David Sterba
    [34m└[m Merge branch 'integration-next' into integration
 
-[34m2236a93[m ([32mThu Mar 6 13:54:00 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: handle case that we can not lookup extent info
+[34m1654842[m ([32mWed Apr 2 16:29:38 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Switch to the new asciidoc Documentation.
 
-[34m6cf9291[m ([32mThu Mar 6 13:53:59 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: force to udate tree root for some cases
+[34mb9db406[m ([32mWed Apr 2 16:29:37 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for mkfs.btrfs.
 
-[34m24b20f3[m ([32mThu Mar 6 13:53:58 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: insert root dir into reloc data tree when reiniting it
+[34me7d94cc[m ([32mWed Apr 2 16:29:36 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for fsck.btrfs.
 
-[34mc7714ad[m ([32mThu Mar 6 13:53:57 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: reset balance after reiniting extent root
+[34m7fba3ee[m ([32mWed Apr 2 16:29:35 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-zero-log
 
-[34ma248f68[m ([32mThu Mar 6 13:53:56 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: deal with really corrupted extent tree
+[34mff7ad99[m ([32mWed Apr 2 16:29:34 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfstune.
 
-[34mb494c18[m ([32mThu Mar 6 11:36:46 2014 +0800[m) - Gui Hecheng
+[34m82012db[m ([32mWed Apr 2 16:29:33 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-show-super.
+
+[34m976378c[m ([32mWed Apr 2 16:29:32 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-map-logical.
+
+[34mdd0acc3[m ([32mWed Apr 2 16:29:31 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-image.
+
+[34md2681b5[m ([32mWed Apr 2 16:29:30 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-find-root.
+
+[34m9ed8975[m ([32mWed Apr 2 16:29:29 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-debug-tree.
+
+[34m3954187[m ([32mWed Apr 2 16:29:28 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-convert.
+
+[34m2b33ecb[m ([32mWed Apr 2 16:29:27 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfsck
+
+[34m26d29f8[m ([32mWed Apr 2 16:29:26 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-dedup.
+
+[34m804bb34[m ([32mWed Apr 2 16:29:25 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-replace.
+
+[34m624b6e3[m ([32mWed Apr 2 16:29:24 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert and enhance the man page of btrfs-qgroup.
+
+[34m10d775f[m ([32mWed Apr 2 16:29:23 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-quota.
+
+[34mc2b2050[m ([32mWed Apr 2 16:29:22 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-receive.
+
+[34m281531f[m ([32mWed Apr 2 16:29:21 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-send.
+
+[34m29ecb32[m ([32mWed Apr 2 16:29:20 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-inspect-internal
+
+[34m3b816a3[m ([32mWed Apr 2 16:29:19 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-rescue
+
+[34me03e4cc[m ([32mWed Apr 2 16:29:18 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-check.
+
+[34m8df2dc1[m ([32mWed Apr 2 16:29:17 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-scrub
+
+[34m5003e80[m ([32mWed Apr 2 16:29:16 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-device subcommand.
+
+[34m8150408[m ([32mWed Apr 2 16:29:15 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-balance.
+
+[34m8bf3a55[m ([32mWed Apr 2 16:29:14 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for filesystem subcommand.
+
+[34m2a0f3d8[m ([32mWed Apr 2 16:29:13 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Convert man page for btrfs-subvolume
+
+[34mb00e68c[m ([32mWed Apr 2 16:29:12 2014 +0800[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Introduce asciidoc based man page and btrfs man page.
+
+[34m64b2fec[m ([32mTue Apr 1 18:01:10 2014 +0800[m) - Gui Hecheng
+   [34m└[m btrfs-progs: update manpage for btrfs resize support size unit t/p/e
+
+[34m2987d6e[m ([32mThu Mar 27 19:04:29 2014 +0100[m) - David Sterba
+   [34m└[m btrfs-progs: fix listing deleted subvolumes
+
+[34m55f6bb6[m ([32mThu Mar 27 16:15:39 2014 +0100[m) - David Sterba
+   [34m└[m btrfs-progs: make device discard process interruptible
+
+[34m1cac25c[m ([32mTue Mar 25 09:37:13 2014 -0400[m) - Jeff Mahoney
+   [34m└[m btrfs-progs: allow use of subvolume id to create snapshots
+
+[34m39c306c[m ([32mWed Mar 19 06:10:02 2014 +0000[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Fix minor problems in man page of btrfs
+
+[34m323357a[m ([32mWed Mar 19 06:10:02 2014 +0000[m) - Qu Wenruo
+   [34m└[m btrfs-progs: Fix memleak in get_raid56_used()
+
+[34mc7ce425[m ([32mThu Mar 6 11:36:46 2014 +0800[m) - Gui Hecheng
    [34m└[m btrfs-progs: cleanup dead return after usage() for fi-disk_usage
 
-[34md685a7e[m ([32mWed Mar 5 02:12:23 2014 +0200[m) - Rakesh Pandit
-   [34m└[m Btrfs-progs: remove unused variable and update btrfs-image man page
-
-[34mc5ee6cd[m ([32mTue Mar 11 00:39:48 2014 +0100[m) - Arvin Schnell
-   [34m└[m Btrfs-progs: use the correct integer type for ioctl
-
-[34madb50d0[m ([32mThu Mar 6 11:36:48 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: make the device scan logic more clear
-
-[34m34e5ae0[m ([32mThu Mar 6 11:36:47 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: cleanup device stat usage prompt
-
-[34m67432e4[m ([32mFri Feb 28 19:27:06 2014 +0200[m) - Rakesh Pandit
-   [34m└[m Btrfs-progs: free path if we don't find root item
-
-[34mce7b0e6[m ([32mSun Feb 2 14:01:20 2014 +0100[m) - Christophe Vu-Brugier
-   [34m└[m btrfs-progs: include <sys/xattr.h> instead of <attr/xattr.h>
-
-[34m6d39530[m ([32mThu Feb 27 10:25:49 2014 -0500[m) - Josef Bacik
-   [34m└[m Btrfs-progs: make sure to save mirror_num only if it is set
-
-[34m8a67f47[m ([32mThu Feb 27 10:18:41 2014 -0500[m) - Josef Bacik
-   [34m└[m Btrfs-progs: record generation for tree blocks in fsck
-
-[34m9aa541d[m ([32mWed Feb 26 16:23:08 2014 +0800[m) - Qu Wenruo
-   [34m└[m btrfs-progs: Init root_item to avoid gcc 4.8.2 warning
-
-[34m68db10f[m ([32mTue Feb 25 19:48:57 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: use bitfield instead of integer for some variants in fs_info
-
-[34m0b38b7c[m ([32mTue Feb 25 18:25:39 2014 +0000[m) - Filipe David Borba Manana
-   [34m└[m Btrfs-progs: fix restore of files with compressed extents
-
-[34m6580557[m ([32mMon Feb 24 19:43:39 2014 +0800[m) - Anand Jain
-   [34m└[m btrfs-progs: Fix bug when scanned for devid which was missing and deleted
-
-[34m28cdf52[m ([32mMon Feb 24 19:43:38 2014 +0800[m) - Anand Jain
-   [34m└[m btrfs-progs: latest_devid is not always the probed devid
-
-[34m7535272[m ([32mMon Feb 24 19:43:37 2014 +0800[m) - Anand Jain
-   [34m└[m btrfs-progs: there is devid 0 when replace is running
-
-[34m835392b[m ([32mMon Feb 24 19:55:14 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: fix wrong return value in check_block()
-
-[34md94ec45[m ([32mTue Feb 25 19:48:56 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: fsck: avoid overwritting existed space when initting csum tree
-
-[34mc98dd45[m ([32mTue Feb 25 16:42:29 2014 +0900[m) - Hidetoshi Seto
-   [34m└[m btrfs-progs: Copyright string update
-
-[34m82929fe[m ([32mMon Feb 24 17:08:11 2014 +0200[m) - Rakesh Pandit
-   [34m└[m btrfs-progs: mkfs.btrfs man page: update default metadata blocksize
-
-[34m2285ab8[m ([32mThu Feb 20 16:44:30 2014 +0200[m) - Rakesh Pandit
-   [34m└[m btrfs-progs: don't remove BTRFS_BLOCK_GROUP_DUP in chunk type
-
-[34md602d00[m ([32mThu Feb 13 20:19:44 2014 +0100[m) - Goffredo Baroncelli
-   [34m└[m btrfs-progs: Allow use of get_device_info()
-
-[34m9ec42a1[m ([32mThu Feb 20 10:49:05 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: fix wrong error msg for exec btrfsck as non-root
-
-[34m41649a0[m ([32mThu Feb 20 10:49:03 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: judge the return value of check_mounted more accurately
-
-[34mbec8fe7[m ([32mThu Feb 20 09:30:52 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part3
-
-[34m4abf0d5[m ([32mThu Feb 20 09:30:51 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part2
-
-[34m7f2a472[m ([32mThu Feb 27 14:08:38 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part1
-
-[34m7f72dda[m ([32mWed Feb 26 13:41:38 2014 +0800[m) - Qu Wenruo
+[34m7bb47df[m ([32mWed Feb 26 13:41:38 2014 +0800[m) - Qu Wenruo
    [34m└[m btrfs-progs: Remove the get_fslist error message.
 
-[34m1b3bb68[m ([32mThu Feb 13 20:20:21 2014 +0100[m) - Goffredo Baroncelli
+[34m9a1392a[m ([32mThu Feb 13 20:20:21 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Create a new entry in btrfs man page for btrfs device disk-usage.
 
-[34m1b48895[m ([32mThu Feb 13 20:20:12 2014 +0100[m) - Goffredo Baroncelli
+[34mb6443ac[m ([32mThu Feb 13 20:20:12 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Add btrfs device disk-usage command
 
-[34mcb6ed48[m ([32mThu Feb 13 20:20:02 2014 +0100[m) - Goffredo Baroncelli
+[34mb3d71f4[m ([32mThu Feb 13 20:20:02 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Create entry in man page for btrfs filesystem disk-usage
 
-[34m5b7379a[m ([32mThu Feb 13 20:19:50 2014 +0100[m) - Goffredo Baroncelli
+[34maa66f17[m ([32mThu Feb 13 20:19:50 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Add command btrfs filesystem disk-usage
 
-[34m7bbfa77[m ([32mThu Feb 13 20:19:21 2014 +0100[m) - Goffredo Baroncelli
+[34ma008835[m ([32mThu Feb 13 20:19:21 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Add helpers functions to handle the printing of data in tabular format.
 
-[34m6eca45b[m ([32mThu Feb 13 20:19:09 2014 +0100[m) - Goffredo Baroncelli
+[34mabe2237[m ([32mThu Feb 13 20:19:09 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Create the man page entry for the command btrfs fi df
 
-[34mda742dd[m ([32mThu Feb 13 20:19:01 2014 +0100[m) - Goffredo Baroncelli
+[34m75f5cf0[m ([32mThu Feb 13 20:19:01 2014 +0100[m) - Goffredo Baroncelli
    [34m└[m Enhance the command btrfs filesystem df.
 
-[34mbbe9820[m ([32mMon Oct 14 12:59:56 2013 +0800[m) - Liu Bo
+[34m2982eb2[m ([32mMon Oct 14 12:59:56 2013 +0800[m) - Liu Bo
    [34m└[m Btrfs-progs: add dedup subcommand
 
-[34mbcf7a15[m ([32mTue Jan 14 19:17:08 2014 +0800[m) - Anand Jain
+[34m3a1c3be[m ([32mTue Jan 14 19:17:08 2014 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: mid flight return leaks memory during filesystem show mnt
 
-[34mad5f23c[m ([32mThu Dec 19 16:38:41 2013 +0800[m) - Anand Jain
+[34m2aac6f2[m ([32mThu Dec 19 16:38:41 2013 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: fs show should handle if subvol(s) mounted
 
-[34mc2f04d0[m ([32mFri Nov 15 19:25:33 2013 +0800[m) - Anand Jain
+[34m16c62d0[m ([32mFri Nov 15 19:25:33 2013 +0800[m) - Anand Jain
    [34m└[m btrfs-progs: mechanism to fetch fsinfo from btrfs-control
 
-[34me863e8d[m ([32mThu Feb 13 20:19:44 2014 +0100[m) - Goffredo Baroncelli
-   [34m└[m btrfs-progs: Allow use of get_device_info()
+[34m625592a[m ([32mWed Mar 26 21:34:30 2014 +0200[m) - Rakesh Pandit
+   [34m└[m Btrfs-progs: chunk_recovery: fix mem leak and pthread_cancel call
 
-[34mc2d9e49[m ([32mThu Feb 20 10:49:05 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: fix wrong error msg for exec btrfsck as non-root
-
-[34m03de074[m ([32mThu Feb 20 10:49:03 2014 +0800[m) - Gui Hecheng
-   [34m└[m btrfs-progs: judge the return value of check_mounted more accurately
-
-[34mbd093c7[m ([32mThu Feb 20 09:30:52 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part3
-
-[34m30cb8af[m ([32mThu Feb 20 09:30:51 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part2
-
-[34m7e530e3[m ([32mThu Feb 20 09:30:50 2014 +0800[m) - Wang Shilong
-   [34m└[m Btrfs-progs: switch to arg_strtou64() part1
+[34m5e5a552[m ([32mTue Mar 25 16:47:07 2014 +0200[m) - Rakesh Pandit
+   [34m└[m Btrfs-progs: scrub: disable thread cancelability during mutex locks
 
