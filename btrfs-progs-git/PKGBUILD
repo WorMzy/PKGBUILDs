@@ -31,7 +31,6 @@ pkgver() {
 
 build() {
   cd "$_gitname"
-  sed -i "s|-Werror|-Wno-error|" Makefile
   make CFLAGS="$CFLAGS" all btrfs-select-super
 }
 
