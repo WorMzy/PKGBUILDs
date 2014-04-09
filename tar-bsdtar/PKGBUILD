@@ -1,0 +1,17 @@
+# Maintainer: WorMzy Tykashi <wormzy.tykashi@gmail.com>
+pkgname=tar-bsdtar
+pkgver=1
+pkgrel=1
+pkgdesc="Replace the tar binary with a symlink to bsdtar"
+arch=('any')
+url="n/a"
+license=('GPL')
+depends=('libarchive')
+provides=('tar')
+conflicts=('tar')
+
+package() {
+  install -dm755 "$pkgdir/usr/bin/"
+  cd "$pkgdir/usr/bin/"
+	ln -s bsdtar tar
+}
