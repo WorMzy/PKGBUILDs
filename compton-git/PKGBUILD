@@ -11,7 +11,7 @@ arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
 depends=('libgl' 'libdbus' 'libxcomposite' 'libxdamage' 'libxrandr' 'pcre' 'libconfig' 'libxinerama')
-makedepends=('git' 'asciidoc')
+makedepends=('git' 'asciidoc' 'mesa')
 optdepends=('xorg-xprop: for compton-trans'
             'xorg-xwininfo: for compton-trans')
 source=("git://github.com/chjj/compton.git")
