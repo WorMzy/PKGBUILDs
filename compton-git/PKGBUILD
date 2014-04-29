@@ -4,7 +4,7 @@
 
 pkgname=compton-git
 _gitname=compton
-pkgver=2014.01.21.gaeda148
+pkgver=0.1_beta2.27.gef58e4e
 pkgrel=1
 pkgdesc="X Compositor (a fork of xcompmgr-dana)"
 arch=(i686 x86_64)
@@ -19,7 +19,7 @@ md5sums=("SKIP")
 
 pkgver() {
     cd "${srcdir}/${_gitname}"
-    git log -1 --format="%cd.g%h" --date=short | sed 's/-/./g'
+    git describe --tags | sed -e 's:v::' -e 's/-/./g'
 }
 
 build() {
