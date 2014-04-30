@@ -21,6 +21,11 @@ md5sums=('SKIP'
          'b09688a915a0ec8f40e2f5aacbabc9ad'
          '7241ba3a4286d08da0d50b7176941112')
 
+prepare() {
+  cd "$_gitname"
+  sed -i 's:$(LNS) btrfs-check.8.gz $(DESTDIR)$(man8dir):$(LNS) btrfs-check.8.gz $(DESTDIR)$(man8dir)/btrfsck.8.gz:' Documentation/Makefile
+}
+
 build() {
   cd "$_gitname"
   make CFLAGS="$CFLAGS" all btrfs-select-super
