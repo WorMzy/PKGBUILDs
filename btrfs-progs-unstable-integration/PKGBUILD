@@ -37,9 +37,10 @@ package() {
   install -Dm644 INSTALL "$pkgdir/usr/share/doc/btrfs/README"
 }
 
-check() {
-  cd "$_gitname"
-  make test
-}
+# Tests are no longer automatized for integration-20140603
+#check() {
+#  cd "$_gitname"
+#  make test
+#}
 
 # vim:set ts=2 sw=2 et:
