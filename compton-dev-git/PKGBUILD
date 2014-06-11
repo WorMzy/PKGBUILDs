@@ -4,7 +4,7 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=2014.03.11.g9950d08
+pkgver=0.1_beta2.30.g81c677f
 pkgrel=1
 pkgdesc="X Compositor (Richard Grenville's development branch)"
 arch=(i686 x86_64)
@@ -23,7 +23,7 @@ md5sums=("SKIP")
 
 pkgver() {
     cd "${srcdir}/${_gitname}"
-    git log -1 --format="%cd.g%h" --date=short | sed 's/-/./g'
+    git describe --tags | sed -e 's:v::' -e 's:-:.:g'
 }
 
 build() {
