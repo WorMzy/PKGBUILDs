@@ -2,7 +2,7 @@
 
 pkgname=btrfs-progs-unstable-integration
 _gitname=${pkgname%-integration}
-pkgver=20140429
+pkgver=20140603
 pkgrel=1
 pkgdesc="Btrfs filesystem utilities - David Sterba's unstable 'integration' branch"
 arch=("i686" "x86_64")
@@ -20,11 +20,6 @@ source=(btrfs-progs-unstable::git+"http://repo.or.cz/r/btrfs-progs-unstable/deve
 md5sums=('SKIP'
          'b09688a915a0ec8f40e2f5aacbabc9ad'
          '7241ba3a4286d08da0d50b7176941112')
-
-prepare() {
-  cd "$_gitname"
-  sed -i 's:$(LNS) btrfs-check.8.gz $(DESTDIR)$(man8dir):$(LNS) btrfs-check.8.gz $(DESTDIR)$(man8dir)/btrfsck.8.gz:' Documentation/Makefile
-}
 
 build() {
   cd "$_gitname"
