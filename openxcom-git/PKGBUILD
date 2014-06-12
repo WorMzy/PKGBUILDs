@@ -18,19 +18,22 @@ source=(git+"https://github.com/SupSuper/${_gitname}.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir/$_gitname"
+  cd $_gitname
   git describe --tags | sed -e 's:v::' -e 's:-:.:g'
 }
 
-build() {
-  cd "$srcdir/$_gitname"
+prepare() {
+  cd $_gitname
   ./autogen.sh
-  ./configure --prefix=/usr
+}
 
+build() {
+  cd $_gitname
+  ./configure --prefix=/usr
   make
 }
 
 package() {
-  cd "$srcdir/$_gitname"
+  cd $_gitname
   make DESTDIR="$pkgdir" install
 }
