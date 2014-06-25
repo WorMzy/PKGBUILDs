@@ -1,7 +1,8 @@
 # Maintainer:  WorMzy Tykashi <wormzy.tykashi@gmail.com>
 # Contributor: Dmitry Korzhevin <dkorzhevin AT gmail DOT com>
-# Contributor:  C.Coutinho <kikijump[at]gmail[dot]com>
-# Contributor: Grigorios Bouzakis <grbzks[at]gmail[dot]com>, TDY <tdy@gmx.com>
+# Contributor: C.Coutinho <kikijump[at]gmail[dot]com>
+# Contributor: Grigorios Bouzakis <grbzks[at]gmail[dot]com>
+# Contributor: TDY <tdy@gmx.com>
 
 pkgname=tmux-git
 _gitname=tmux-code
