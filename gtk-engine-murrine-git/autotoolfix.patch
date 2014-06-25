@@ -1,0 +1,34 @@
+diff -aur a/autogen.sh b/autogen.sh
+--- a/autogen.sh	2014-06-25 11:35:41.071060702 +0100
++++ b/autogen.sh	2014-06-25 11:35:04.935311380 +0100
+@@ -16,28 +16,8 @@
+ 	DIE=1
+ }
+ 
+-if automake-1.11 --version < /dev/null > /dev/null 2>&1 ; then
+-	AUTOMAKE=automake-1.11
+-	ACLOCAL=aclocal-1.11
+-elif automake-1.10 --version < /dev/null > /dev/null 2>&1 ; then
+-	AUTOMAKE=automake-1.10
+-	ACLOCAL=aclocal-1.10
+-elif automake-1.9 --version < /dev/null > /dev/null 2>&1 ; then
+-	AUTOMAKE=automake-1.9
+-	ACLOCAL=aclocal-1.9
+-elif automake-1.8 --version < /dev/null > /dev/null 2>&1 ; then
+-	AUTOMAKE=automake-1.8
+-	ACLOCAL=aclocal-1.8
+-elif automake-1.7 --version < /dev/null > /dev/null 2>&1 ; then
+-	AUTOMAKE=automake-1.7
+-	ACLOCAL=aclocal-1.7
+-else
+-	echo
+-	echo "You must have automake 1.7.x installed to compile $PROJECT."
+-	echo "Install the appropriate package for your distribution,"
+-	echo "or get the source tarball at http://ftp.gnu.org/gnu/automake/"
+-	DIE=1
+-fi
++AUTOMAKE=automake
++ACLOCAL=aclocal
+ 
+ (libtool --version) < /dev/null > /dev/null 2>&1 || {
+ 	echo
