@@ -2,7 +2,7 @@
 
 pkgname=btrfs-progs-unstable-integration
 _gitname=${pkgname%-integration}
-pkgver=20140618
+pkgver=20140624
 pkgrel=1
 pkgdesc="Btrfs filesystem utilities - David Sterba's unstable 'integration' branch"
 arch=("i686" "x86_64")
@@ -15,18 +15,11 @@ conflicts=('btrfs-progs' 'btrfs-progs-git' 'btrfs-progs-integration-git')
 changelog=changelog.txt
 _url=https://projects.archlinux.org/svntogit/packages.git/plain/trunk/
 source=(btrfs-progs-unstable::git+"http://repo.or.cz/r/btrfs-progs-unstable/devel.git#branch=integration-${pkgver/./-}"
-        "add-btrfs-mount.patch"
         "initcpio-hook-btrfs::${_url}initcpio-hook-btrfs?h=packages/btrfs-progs"
         "initcpio-install-btrfs::${_url}initcpio-install-btrfs?h=packages/btrfs-progs")
 md5sums=('SKIP'
-         'cd7c18ad51841ed6d7bba9203ebd1c0b'
          'b09688a915a0ec8f40e2f5aacbabc9ad'
          '7241ba3a4286d08da0d50b7176941112')
-
-prepare() {
-  cd $_gitname
-  patch -p1 -i "$srcdir/add-btrfs-mount.patch"
-}
 
 build() {
   cd "$_gitname"
