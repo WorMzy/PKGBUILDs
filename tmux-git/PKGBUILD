@@ -22,20 +22,25 @@ md5sums=('SKIP'
          '71601bc37fa44e4395580b321963018e')
 
 pkgver() {
-  cd "$_gitname"
+  cd $_gitname
   git log -1 --format="%cd.%h" --date=short | sed 's:-:.:g'
 }
 
+prepare() {
+  cd $_gitname
+  ./autogen.sh
+}
+
 build() {
-  cd "$_gitname"
-  ./autogen.sh && ./configure
+  cd $_gitname
+  ./configure --prefix=/usr
   make
 }
 
 package() {
-  cd "$_gitname"
-  install -Dm755 tmux "$pkgdir/usr/bin/tmux"
-  install -Dm644 tmux.1 "$pkgdir/usr/share/man/man1/tmux.1"
+  cd $_gitname
+
+  make DESTDIR="$pkgdir" install
   install -Dm644 examples/tmux.vim "$pkgdir/usr/share/vim/vimfiles/syntax/tmux.vim"
   install -Dm644 $srcdir/LICENSE "$pkgdir/usr/share/licenses/tmux/LICENSE"
   install -dm755 "$pkgdir/usr/share/tmux/"
