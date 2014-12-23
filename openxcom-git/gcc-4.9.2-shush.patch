@@ -1,0 +1,56 @@
+diff --git a/src/Battlescape/BattlescapeGenerator.cpp b/src/Battlescape/BattlescapeGenerator.cpp
+index ec79f08..5ac7fad 100644
+--- a/src/Battlescape/BattlescapeGenerator.cpp
++++ b/src/Battlescape/BattlescapeGenerator.cpp
+@@ -2289,14 +2289,14 @@ bool BattlescapeGenerator::addLine(MapDirection direction, const std::vector<SDL
+ 
+ 	int roadX, roadY;
+ 	int *iteratorValue = &roadX;
+-	int *staticValue = &roadY;
++//	int *staticValue = &roadY;
+ 	MapBlockType comparator = MT_NSROAD;
+ 	MapBlockType typeToAdd = MT_EWROAD;
+ 	int limit = _mapsize_x / 10;
+ 	if (direction == MD_VERTICAL)
+ 	{
+ 		iteratorValue = &roadY;
+-		staticValue = &roadX;
++//		staticValue = &roadX;
+ 		comparator = MT_EWROAD;
+ 		typeToAdd = MT_NSROAD;
+ 		limit = _mapsize_y / 10;
+diff --git a/src/Ruleset/MapScript.cpp b/src/Ruleset/MapScript.cpp
+index e7f8c34..ff0945d 100644
+--- a/src/Ruleset/MapScript.cpp
++++ b/src/Ruleset/MapScript.cpp
+@@ -371,7 +371,7 @@ MapBlock *MapScript::getNextBlock(RuleTerrain *terrain)
+ 		return terrain->getRandomMapBlock(_sizeX * 10, _sizeY * 10, getGroupNumber());
+ 	}
+ 	size_t result = getBlockNumber();
+-	if (result < terrain->getMapBlocks()->size() && result != MT_UNDEFINED)
++	if (result < terrain->getMapBlocks()->size() && result != (unsigned)MT_UNDEFINED)
+ 	{
+ 		return terrain->getMapBlocks()->at(result);
+ 	}
+diff --git a/src/Savegame/SaveConverter.cpp b/src/Savegame/SaveConverter.cpp
+index e4efe8f..9205dfa 100644
+--- a/src/Savegame/SaveConverter.cpp
++++ b/src/Savegame/SaveConverter.cpp
+@@ -283,7 +283,7 @@ void SaveConverter::loadDatIGlob()
+ 
+ 	// Fix up the months
+ 	int monthsPassed = month + (_year - _rule->getStartingTime().getYear()) * 12;
+-	for (unsigned int i = 0; i < monthsPassed - 1; ++i)
++	for (signed int i = 0; i < monthsPassed - 1; ++i)
+ 	{
+ 		_save->addMonth();
+ 	}
+@@ -701,7 +701,7 @@ void SaveConverter::loadDatBase()
+ 			int engineers = load<Uint8>(bdata + 0x5E);
+ 			int scientists = load<Uint8>(bdata + 0x5F);
+ 			// items
+-			for (int j = 0; j < _nItems; ++j)
++			for (size_t j = 0; j < _nItems; ++j)
+ 			{
+ 				int qty = load<Uint16>(bdata + 0x60 + j * 2);
+ 				if (qty != 0 && _idItems[j] != 0)
