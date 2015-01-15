@@ -4,27 +4,15 @@
 pkgbase=openxcom-git
 pkgname=('openxcom-git' 'openxcom-docs-git')
 _gitname=OpenXcom
-<<<<<<< HEAD
-pkgver=1.0_259_gc048095
-=======
 pkgver=1.0_665_gce9a620
->>>>>>> 2e8b1f3259fdaacc4aa2887e1b5b5da58c536460
 pkgrel=1
 arch=('i686' 'x86_64')
 url="http://openxcom.org/"
 license=('GPL3')
-<<<<<<< HEAD
-makedepends=('git' 'boost' 'glu' 'xmlto' 'docbook-xml' 'docbook-xsl' 'doxygen'
-             'sdl' 'sdl_gfx' 'sdl_image' 'sdl_mixer' 'yaml-cpp')
+makedepends=('git' 'xmlto' 'docbook-xml' 'docbook-xsl' 'doxygen' 'sdl_mixer' 'sdl_gfx'
+             'sdl_image' 'sdl' 'yaml-cpp' 'libgl' 'gcc-libs' 'glibc' 'boost' 'glu')
 source=(git+"https://github.com/SupSuper/${_gitname}.git")
 sha256sums=('SKIP')
-=======
-makedepends=('git' 'xmlto' 'docbook-xml' 'docbook-xsl' 'doxygen' 'sdl_mixer' 'sdl_gfx' 'sdl_image' 'sdl' 'yaml-cpp' 'libgl' 'gcc-libs' 'glibc' 'boost' 'glu')
-source=(git+"https://github.com/SupSuper/${_gitname}.git"
-        gcc-4.9.2-shush.patch)
-sha256sums=('SKIP'
-            '97a30127417487d6b8d18a6c0a393c4cc6ce9a38052fa4518567b56e59f4ad27')
->>>>>>> 2e8b1f3259fdaacc4aa2887e1b5b5da58c536460
 
 pkgver() {
   cd $_gitname
@@ -33,7 +21,6 @@ pkgver() {
 
 prepare() {
   cd $_gitname
-  patch -p1 -i "${srcdir}/gcc-4.9.2-shush.patch"
   ./autogen.sh
 }
 
@@ -45,13 +32,7 @@ build() {
 
 package_openxcom-git() {
   pkgdesc="An open-source reimplementation of the famous X-COM game (git-version)"
-<<<<<<< HEAD
-  depends=('libdrm' 'libgl' 'libx11' 'libxau' 'libxcb' 'libxdamage'
-           'libxdmcp' 'libxext' 'libxfixes' 'libxshmfence' 'libxxf86vm'
-           'mesa' 'sdl' 'sdl_gfx' 'sdl_image' 'sdl_mixer' 'yaml-cpp')
-=======
   depends=('sdl_mixer' 'sdl_gfx' 'sdl_image' 'sdl' 'yaml-cpp' 'libgl' 'gcc-libs' 'glibc')
->>>>>>> 2e8b1f3259fdaacc4aa2887e1b5b5da58c536460
   provides=('openxcom')
   conflicts=('openxcom')
   install="${pkgname}.install"
