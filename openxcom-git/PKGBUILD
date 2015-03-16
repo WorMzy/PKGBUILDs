@@ -9,11 +9,10 @@ pkgrel=1
 arch=('i686' 'x86_64')
 url="http://openxcom.org/"
 license=('GPL3')
-makedepends=('git' 'xmlto' 'docbook-xml' 'docbook-xsl' 'doxygen' 'sdl_mixer' 'sdl_gfx' 'sdl_image' 'sdl' 'yaml-cpp' 'libgl' 'gcc-libs' 'glibc' 'boost' 'glu')
-source=(git+"https://github.com/SupSuper/${_gitname}.git"
-        gcc-4.9.2-shush.patch)
-sha256sums=('SKIP'
-            '97a30127417487d6b8d18a6c0a393c4cc6ce9a38052fa4518567b56e59f4ad27')
+makedepends=('git' 'xmlto' 'docbook-xml' 'docbook-xsl' 'doxygen' 'sdl_mixer' 'sdl_gfx'
+             'sdl_image' 'sdl' 'yaml-cpp' 'libgl' 'gcc-libs' 'glibc' 'boost' 'glu')
+source=(git+"https://github.com/SupSuper/${_gitname}.git")
+sha256sums=('SKIP')
 
 pkgver() {
   cd $_gitname
@@ -22,7 +21,6 @@ pkgver() {
 
 prepare() {
   cd $_gitname
-  patch -p1 -i "${srcdir}/gcc-4.9.2-shush.patch"
   ./autogen.sh
 }
 
