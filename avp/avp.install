@@ -1,0 +1,5 @@
+post_install() {
+  echo <<EOF
+Copy game files into /opt/avp. See /opt/avp/README for a list of files and md5sums
+EOF
+}
