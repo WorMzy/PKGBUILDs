@@ -15,7 +15,7 @@ IFS="
 "
 for file in $(cat filelist); do
   if ! find $_avppath -name "$file" -exec cp "{}" . \; &>/dev/null; then
-    echo "Failed to find or copy \"$_avppath/$file\""
+    echo "ERROR: Failed to find or copy \"$file\""
     exit 1
   fi
 done
