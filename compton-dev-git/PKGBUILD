@@ -4,9 +4,9 @@
 
 pkgname=compton-dev-git
 _gitname=compton
-pkgver=0.1_beta2.30.g81c677f
+pkgver=0.1_beta2.69.g86e88bd
 pkgrel=1
-pkgdesc="X Compositor (Richard Grenville's development branch)"
+pkgdesc="X Compositor (Richard Grenville's development branch) + debug"
 arch=(i686 x86_64)
 url="https://github.com/chjj/compton"
 license=('MIT')
@@ -17,7 +17,8 @@ optdepends=('dbus:          To control compton via D-Bus'
             'xorg-xprop:    For compton-trans')
 conflicts=('compton-git' 'compton')
 provides=('compton')
-source=("git://github.com/chjj/compton.git#branch=richardgv-dev")
+source=("git+https://github.com/chjj/compton.git#branch=richardgv-dev")
+options=(debug !strip)
 
 md5sums=("SKIP")
 
