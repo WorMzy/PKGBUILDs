@@ -1,0 +1,46 @@
+pkgname=fossamail
+pkgver=25.1.7
+_pmver=458541d
+pkgrel=1
+pkgdesc="Open source mail client based on Thunderbird focusing on efficiency."
+arch=('i686' 'x86_64')
+url="http://www.fossamail.com/"
+license=('MPL' 'GPL' 'LGPL')
+depends=('gtk2' 'glib2' 'glib2' 'gtk3' 'libevent' 'gconf' 'alsa-lib')
+makedepends=('git' 'mercurial' 'python2' 'autoconf2.13' 'unzip' 'zip' 'nspr' 'nss' 'hunspell' 'yasm')
+install=fossamail.install
+source=(git+"https://github.com/MoonchildProductions/FossaMail#tag=${pkgver}_Release"
+        git+"https://github.com/MoonchildProductions/Pale-Moon#commit=${_pmver}"
+        comm::hg+"http://hg.mozilla.org/comm-central"
+        hg+"https://hg.mozilla.org/mozilla-central/"
+        mozconfig.in)
+md5sums=('SKIP'
+         'SKIP'
+         'SKIP'
+         'SKIP'
+         '30521f6d2d69040b9d53787620892652')
+
+prepare() {
+  cd FossaMail
+  rmdir mozilla
+  ln -fs "$srcdir/Pale-Moon" mozilla
+  ln -fs "$srcdir/comm" comm
+  ln -fs "$srcdir/mozilla-central" comm/mozilla
+  cp "$srcdir/mozconfig.in" comm/.mozconfig.mk
+
+  chmod -R +x build/autoconf/*
+  find . -name '*.sh' -exec chmod +x {} \;
+}
+  
+build() {
+  cd FossaMail/comm
+  python2 client.py checkout
+
+  export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
+  export CPPFLAGS="$CPPFLAGS -O2"
+  make -f client.mk
+}
+
+package() {
+  echo
+}
